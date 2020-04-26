@@ -1,0 +1,16 @@
+PODS:
+  - ChromaColorPicker (2.0.2)
+
+DEPENDENCIES:
+  - ChromaColorPicker
+
+SPEC REPOS:
+  trunk:
+    - ChromaColorPicker
+
+SPEC CHECKSUMS:
+  ChromaColorPicker: 307585f2dc23d4d72f24cad320c1e08825cb5c09
+
+PODFILE CHECKSUM: 400c94df3aef54cc6b33af9bb630568a237790c6
+
+COCOAPODS: 1.9.1

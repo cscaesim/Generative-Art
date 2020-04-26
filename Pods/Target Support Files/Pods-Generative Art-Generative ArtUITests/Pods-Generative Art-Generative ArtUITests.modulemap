@@ -1,0 +1,6 @@
+framework module Pods_Generative_Art_Generative_ArtUITests {
+  umbrella header "Pods-Generative Art-Generative ArtUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

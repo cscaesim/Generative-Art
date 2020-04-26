@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChromaColorPicker
 
 class ViewController: UIViewController {
     
@@ -16,13 +17,20 @@ class ViewController: UIViewController {
         
         return button
     }()
+    
+    let segmentControl: UISegmentedControl = {
+        let sg = UISegmentedControl()
+        
+        return sg
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .white
+        
+        let draw = DrawView(frame: self.view.bounds)
+        view.addSubview(draw)
+        
     }
-
-
 }
-
