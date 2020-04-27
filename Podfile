@@ -6,7 +6,7 @@ target 'Generative Art' do
   use_frameworks!
 
   # Pods for Generative Art
-  pod 'ChromaColorPicker'
+  # pod 'ChromaColorPicker'
 
   target 'Generative ArtTests' do
     inherit! :search_paths

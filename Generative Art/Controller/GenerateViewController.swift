@@ -24,25 +24,19 @@ class GenerateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = .red
-        // Do any additional setup after loading the view.
-//        let drawView = DrawView(frame: self.view.bounds)
+
         artView = DrawView(frame: self.view.bounds)
         view.addSubview(artView)
         view.addSubview(saveButton)
-
-//        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        
         setupButton()
     }
     
     func setupButton() {
-//        self.saveButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 1).isActive = true
-//        self.saveButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 1).isActive = true
         self.saveButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 1).isActive = true
         self.saveButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 1).isActive = true
         self.saveButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         self.saveButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
-//        self.saveButton.layer.zPosition = -10
         
     }
     

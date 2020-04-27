@@ -11,9 +11,6 @@ import UIKit
 class DrawView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        backgroundColor = randomColor()
-        //            draw()
-        //            draw(view.frame)
     }
     
     required init?(coder: NSCoder) {
@@ -40,9 +37,9 @@ class DrawView: UIView {
     }
     
     func randomColor() -> UIColor {
-        var r = Double.random(in: 0..<256)
-        var g = Double.random(in: 0..<256)
-        var b = Double.random(in: 0..<256)
+        let r = Double.random(in: 0..<256)
+        let g = Double.random(in: 0..<256)
+        let b = Double.random(in: 0..<256)
         return UIColor(red: CGFloat(r/255), green: CGFloat(g/255), blue: CGFloat(b/255), alpha: 1.0)
     }
     
@@ -69,46 +66,10 @@ class DrawView: UIView {
         print(ranColor)
         
         path.close()
-//        ranColor.set()
         ranColor.setFill()
-//        path.stroke()
-//        path.stroke(with: .hardLight, alpha: 1.0)
         path.stroke()
         path.fill()
     }
-    
-    
-//        func drawLine(x: Int, y: Int, width: Int, height: Int) {
-//            let leftToRight: Bool = Bool.random()
-//
-//            let path = UIBezierPath()
-//
-//            let ranWidth = Int.random(in: 0..<width)
-//            let ranHeight = Int.random(in: 0..<height)
-//
-//
-//            if (leftToRight) {
-//                path.move(to: CGPoint(x: x, y: y))
-//                path.addLine(to: CGPoint(x: x + width, y: y + height))
-//                path.addLine(to: CGPoint(x: x + ranWidth, y: y + ranHeight))
-//            } else {
-//                path.move(to: CGPoint(x: x + ranWidth, y: y))
-//                path.addLine(to: CGPoint(x: x, y: y + height))
-//                path.addLine(to: CGPoint(x: x, y: y + ranHeight))
-//            }
-//
-//            var ranColor = randomColor()
-//            print(ranColor)
-//
-//            path.close()
-//    //        UIColor.green.setStroke()
-//    //        UIColor.orange.setFill()
-//    //        UIColor.cyan.setFill()
-//            ranColor.set()
-//    //        path.stroke()
-//            path.stroke(with: .hardLight, alpha: 1.0)
-//            path.fill()
-//        }
     
     func drawCurve(x: Int, y: Int, width: Int, height: Int) {
         
@@ -127,30 +88,24 @@ class DrawView: UIView {
         if (leftToRight) {
             path.move(to: CGPoint(x: x, y: y))
             path.addArc(withCenter: CGPoint(x: width / 2, y: height / 2), radius: 12, startAngle: 2.5, endAngle: 2.5, clockwise: true)
-//            path.addLine(to: CGPoint(x: x + width, y: y + ranHeight))
-//            path.addLine(to: CGPoint(x: x + ranWidth, y: y + ranHeight))
         } else {
             path.move(to: CGPoint(x: x + ranWidth, y: y))
             path.addArc(withCenter: CGPoint(x: width / 2, y: height / 2), radius: 12, startAngle: 2.5, endAngle: 2.5, clockwise: true)
-//            path.addLine(to: CGPoint(x: x, y: y + height))
-//            path.addLine(to: CGPoint(x: x, y: y + ranHeight))
         }
         
         
-        
-        
-        
-//        path.addCurve(to: width, controlPoint1: x, controlPoint2: y)
         let movePath = CGPoint(x: x, y: y)
         path.move(to: movePath)
-//        path.addCurve(to: movePath, controlPoint1: CGPoint(x: x, y: y), controlPoint2: CGPoint(x: width, y: height))
+
         path.addArc(withCenter: CGPoint(x: width / 2, y: height / 2), radius: 12, startAngle: 2.5, endAngle: 2.5, clockwise: true)
-//        path.addClip()
         path.close()
-//        UIColor.blue.set()
+        
         let color = randomColor()
         color.set()
+        
         path.stroke()
         path.fill()
     }
 }
+
+

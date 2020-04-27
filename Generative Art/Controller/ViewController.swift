@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ChromaColorPicker
+//import ChromaColorPicker
 
 class ViewController: UIViewController {
     
@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Generate", for: .normal)
         
-//        button.backgroundColor = .red
         button.layer.borderColor = CGColor.init(srgbRed: 100/255, green: 100/255, blue: 213/255, alpha: 1)
         button.layer.borderWidth = 5
         button.layer.cornerRadius = 12
@@ -44,15 +43,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        self.view.backgroundColor = .white
         self.view.addSubview(generateButton)
         self.view.addSubview(titleText)
         setupViews()
-        
-        
-//        let draw = DrawView(frame: self.view.bounds)
-//        view.addSubview(draw)
-        
     }
     
     @objc func TransitionToGenerateView() {
