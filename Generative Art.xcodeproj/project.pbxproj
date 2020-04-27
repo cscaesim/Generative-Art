@@ -19,6 +19,7 @@
 		E47F50FF2453CEC300081535 /* ArtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F50FE2453CEC300081535 /* ArtVC.swift */; };
 		E47F51012453D5DE00081535 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F51002453D5DE00081535 /* DrawView.swift */; };
 		E4A328102454E5A700464B71 /* Waveform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A3280F2454E5A700464B71 /* Waveform.swift */; };
+		E4A328122456692700464B71 /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A328112456692700464B71 /* GenerateViewController.swift */; };
 		E993E074728E1E072782AADE /* Pods_Generative_Art.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A723032DE10B9E98E04AF4A /* Pods_Generative_Art.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		E47F50FE2453CEC300081535 /* ArtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtVC.swift; sourceTree = "<group>"; };
 		E47F51002453D5DE00081535 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		E4A3280F2454E5A700464B71 /* Waveform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waveform.swift; sourceTree = "<group>"; };
+		E4A328112456692700464B71 /* GenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,15 +145,14 @@
 		E47F50CD2453CB3800081535 /* Generative Art */ = {
 			isa = PBXGroup;
 			children = (
+				E4A3281424567D5A00464B71 /* View */,
+				E4A3281324567D5400464B71 /* Controller */,
 				E47F50CE2453CB3800081535 /* AppDelegate.swift */,
 				E47F50D02453CB3800081535 /* SceneDelegate.swift */,
-				E47F50D22453CB3800081535 /* ViewController.swift */,
 				E47F50D72453CB3B00081535 /* Assets.xcassets */,
 				E47F50D92453CB3B00081535 /* LaunchScreen.storyboard */,
 				E47F50DC2453CB3B00081535 /* Info.plist */,
 				E47F50FE2453CEC300081535 /* ArtVC.swift */,
-				E47F51002453D5DE00081535 /* DrawView.swift */,
-				E4A3280F2454E5A700464B71 /* Waveform.swift */,
 			);
 			path = "Generative Art";
 			sourceTree = "<group>";
@@ -172,6 +173,24 @@
 				E47F50F22453CB3B00081535 /* Info.plist */,
 			);
 			path = "Generative ArtUITests";
+			sourceTree = "<group>";
+		};
+		E4A3281324567D5400464B71 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E47F50D22453CB3800081535 /* ViewController.swift */,
+				E4A328112456692700464B71 /* GenerateViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4A3281424567D5A00464B71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4A3280F2454E5A700464B71 /* Waveform.swift */,
+				E47F51002453D5DE00081535 /* DrawView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +437,7 @@
 				E47F50CF2453CB3800081535 /* AppDelegate.swift in Sources */,
 				E47F50FF2453CEC300081535 /* ArtVC.swift in Sources */,
 				E47F50D12453CB3800081535 /* SceneDelegate.swift in Sources */,
+				E4A328122456692700464B71 /* GenerateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +606,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2MH5FWQJN;
 				INFOPLIST_FILE = "Generative Art/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,6 +626,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2MH5FWQJN;
 				INFOPLIST_FILE = "Generative Art/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
